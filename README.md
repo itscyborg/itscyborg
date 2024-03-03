@@ -1,7 +1,16 @@
 <h1 align="center">Hi 👋, I'm Niraj kumar</h1>
 <h3 align="center">👨‍💻 I am proficient in various front-end and back-end technologies, but my true passion lies in JavaScript and its various frameworks, such as React and Node.js. This allows me to create seamless, responsive, and feature-rich web applications.</h3>
 <img align="right" alt="coding" width="400" src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif">
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=ashutosh-pmishra&label=Profile%20views&color=0e75b6&style=flat" alt="ashutosh-pmishra" /> </p>
+
+- 👨‍💻 All of my projects are available at [#](#)
+
+- ⚡️ Fun fact I am funny😅
+
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=itscyborg&label=Profile%20views&color=0e75b6&style=flat" alt="itscyborg" /> </p>
+
+
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=itscyborg" alt="itscyborg" /></a> </p>
 
