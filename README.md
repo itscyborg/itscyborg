@@ -23,4 +23,4 @@
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=itscyborg&show_icons=true&locale=en&layout=compact" alt="itscyborg" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=itscyborg&" alt="itscyborg" /></p>
+<p align="center><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=itscyborg&" alt="itscyborg" /></p>
