@@ -30,7 +30,7 @@ I build the backend systems prop firms run on: trading engines, challenge and ri
 
 ## 📈 Prop Firm & Trading Platforms
 
-**Prop-trading firm platform**: backend lead · `NestJS` `PostgreSQL` `Redis` `Socket.IO`
+**[NEXETRO](https://nexetro.com/)**: prop-trading firm platform · backend lead · `NestJS` `PostgreSQL` `Redis` `Socket.IO`
 
 | What | Result |
 | --- | --- |
@@ -40,7 +40,7 @@ I build the backend systems prop firms run on: trading engines, challenge and ri
 | Test suite | **266** unit · **166** integration · **21** e2e · **18** load scripts |
 | Built | Trading engine · challenge and risk engine · double-entry ledger · live market data · admin backend |
 
-**Prop firm review platform**: full-stack · `Next.js` `MongoDB` `PostgreSQL` `Redis`
+**[My Forex Firms](https://www.myforexfirms.com/)**: prop firm review platform · full-stack · `Next.js` `MongoDB` `PostgreSQL` `Redis`
 
 | What | Result |
 | --- | --- |
