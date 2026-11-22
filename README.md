@@ -30,31 +30,26 @@ I build the backend systems prop firms run on: trading engines, challenge and ri
 
 ## 📈 Prop Firm & Trading Platforms
 
-### Prop-trading firm platform: backend lead
-A simulated prop firm. Traders buy an evaluation, trade perpetual futures on live market data, and get a funded account if they hit the profit target without breaking the risk rules.
+**Prop-trading firm platform**: backend lead · `NestJS` `PostgreSQL` `Redis` `Socket.IO`
 
-- **Trading engine:** market and limit orders, take-profit and stop-loss, reduce-only closes, one-way position netting, funding and liquidation. Orders fill against the real order-book depth within slippage bounds, not at the mid price.
-- **Challenge engine:** profit targets, drawdown and daily-loss floors, consistency rules, and automatic progression from evaluation phases to a funded account. Rules are pinned to each account when it's created, so editing a program never changes the rules for traders already in it.
-- **Risk detection:** a live pass blocks fills that would add exposure as soon as a floor is touched. A settled pass then confirms breaches from the market archive.
-- **Double-entry ledger:** Postgres triggers reject unbalanced or edited journals, and every amount uses exact decimals. A reconciliation job checks every account against the ledger every 15 minutes.
-- **Money path:** every fill, fee, funding payment and payout runs as one command in a single transaction, with idempotency keys, per-account advisory locks and a transactional outbox.
-- **Real-time:** a market-data ingest process streams order books and trades, and Socket.IO gateways push live P&L, margin and account updates to the trading terminal.
-- **Admin backend:** accounts, breaches, a risk desk, KYC review and manual actions.
-- **Tests:** race, crash and load suites run against real Postgres and Redis. They check rules such as "a cancel and a fill have exactly one winner".
+| What | Result |
+| --- | --- |
+| Event throughput (transactional outbox) | **~7,600 events/s** with 1 relay · **~14,500 events/s** with 2 |
+| Risk detector CPU | **116% → 35%** at 50 positions · **~40%** at 1,000 positions across 58 instruments |
+| Ledger reconciliation | Every **15 min** · **0 mismatches** in every load run |
+| Test suite | **266** unit · **166** integration · **21** e2e · **18** load scripts |
+| Built | Trading engine · challenge and risk engine · double-entry ledger · live market data · admin backend |
 
-`NestJS` `PostgreSQL` `Redis` `Socket.IO` `Drizzle ORM` `Next.js` `Prometheus` `PM2`
+**Prop firm review platform**: full-stack · `Next.js` `MongoDB` `PostgreSQL` `Redis`
 
-### Prop firm review & complaint platform: full-stack developer
-Traders compare prop firms, file complaints and see how each firm responds. A public trust score reflects the outcomes.
+| What | Result |
+| --- | --- |
+| Trust score | **3** weighted pillars · each deduction recorded, reversible |
+| Vote integrity | **1 vote per user**, enforced by database constraints |
+| Admin security | **4** roles · central guards on **~25** admin routes |
+| Built | Trust-score engine · complaint system · feed ranking · audit log |
 
-- **Trust score engine:** three weighted pillars (credibility, trading conditions, payouts). Each upheld complaint deducts points, scaled by how much the firm has paid out, and every deduction is recorded so it can be reversed.
-- **Complaint system:** a lifecycle with response deadlines, firm replies, moderator decisions and automatic resolution, plus two-level comments.
-- **Abuse-resistant feed ranking:** hot and discovery scores. Votes are weighted by the voter's reputation and counted once per user, enforced by database constraints.
-- **Role-based admin:** admin, moderator, editor and firm roles checked by shared guards, plus rate limiting, upload validation and an audit-log pipeline (Redis to PostgreSQL).
-
-`Next.js` `MongoDB` `PostgreSQL` `Redis` `Clerk` `Jest`
-
-> Full case studies: **[nirajkumar.dev/prop-firm-developer](https://nirajkumar.dev/prop-firm-developer)**
+<sub>Performance figures measured on a development machine, not production. Case studies: [nirajkumar.dev/prop-firm-developer](https://nirajkumar.dev/prop-firm-developer)</sub>
 
 ---
 
@@ -118,14 +113,28 @@ Traders compare prop firms, file complaints and see how each firm responds. A pu
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=itscyborg&show_icons=true&theme=default&hide_border=true&count_private=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=itscyborg&layout=compact&hide_border=true&theme=default" />
+<!-- Overall stats (all-time commits) + streak -->
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=itscyborg&show_icons=true&include_all_commits=true&count_private=true&theme=gruvbox&hide_border=true" alt="GitHub stats" />
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=itscyborg&theme=gruvbox&hide_border=true" alt="GitHub streak" />
+
+<!-- Contribution history (all time) -->
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=itscyborg&theme=gruvbox" alt="Contribution history" />
+
+<!-- Languages + commit stats + when I commit (IST) -->
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=itscyborg&theme=gruvbox" alt="Repos per language" />
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=itscyborg&theme=gruvbox" alt="Most commit language" />
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=itscyborg&theme=gruvbox" alt="Commit stats" />
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=itscyborg&theme=gruvbox&utcOffset=5.5" alt="Productive time" />
 
 </div>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=itscyborg&hide_border=true" />
-</div>
+### 📅 Contributions this month
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=itscyborg&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545&days=30&custom_title=Contributions%20in%20the%20last%2030%20days" alt="Contributions in the last 30 days" />
+
+### 🗓️ Last 3 months
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=itscyborg&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545&days=90&custom_title=Contributions%20in%20the%20last%2090%20days" alt="Contributions in the last 90 days" />
 
 ---
 
