@@ -128,13 +128,6 @@ I build the backend systems prop firms run on: trading engines, challenge and ri
 
 </div>
 
-### 📅 Contributions this month
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=itscyborg&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545&days=30&custom_title=Contributions%20in%20the%20last%2030%20days" alt="Contributions in the last 30 days" />
-
-### 🗓️ Last 3 months
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=itscyborg&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545&days=90&custom_title=Contributions%20in%20the%20last%2090%20days" alt="Contributions in the last 90 days" />
 
 ---
 
